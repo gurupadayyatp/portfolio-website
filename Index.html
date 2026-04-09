@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ERP Data Engineering Portfolio</title>
+
+  <style>
+    body {font-family:'Segoe UI', Arial; margin:0; background:#f5f7fb; color:#333;}
+    header {background:#1F3A8A; color:white; padding:50px; text-align:center;}
+    section {padding:40px; margin:20px; background:white; border-radius:12px; box-shadow:0 4px 10px rgba(0,0,0,0.05);} 
+    h2 {color:#1F3A8A;}
+
+    /* FIXED IMAGE HANDLING */
+    img {
+      width:auto;
+      max-width:100%;
+      display:block;
+      margin:15px auto;
+      border-radius:10px;
+      background:white;
+      padding:5px;
+    }
+
+    .grid {display:grid; grid-template-columns:1fr 1fr; gap:20px;}
+    .card {background:#eef2ff; padding:20px; border-radius:10px;}
+
+    /* SIDE BY SIDE */
+    .image-row {
+      display:flex;
+      gap:20px;
+      flex-wrap:wrap;
+    }
+    .image-row img {
+      width:48%;
+    }
+
+    /* GRID */
+    .image-grid {
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:15px;
+    }
+
+    /* SLIDER */
+    .slider {
+      position:relative;
+      max-width:900px;
+      margin:auto;
+    }
+    .slide {display:none; width:100%;}
+    .slide.active {display:block;}
+
+    .prev, .next {
+      position:absolute;
+      top:50%;
+      transform:translateY(-50%);
+      background:#1F3A8A;
+      color:white;
+      border:none;
+      padding:10px;
+      cursor:pointer;
+      border-radius:50%;
+    }
+    .prev {left:10px;}
+    .next {right:10px;}
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>ERP Data Engineering Project</h1>
+  <p>Microsoft Fabric | Lakehouse | Power BI</p>
+  <p><b>Gurupadayya Pujar</b> | Senior Data Engineer</p>
+</header>
+
+<section>
+  <h2>📌 Business Context</h2>
+  <p>ERP systems are designed for transactional processing, not analytics. This leads to slow reporting, lack of historical insights, and complex SQL queries for business users.</p>
+</section>
+
+<section>
+  <h2>🎯 Solution Overview</h2>
+  <div class="grid">
+    <div class="card">Incremental Data Processing</div>
+    <div class="card">Medallion Architecture</div>
+    <div class="card">Star Schema Modeling</div>
+    <div class="card">Power BI Dashboards</div>
+  </div>
+</section>
+
+<section>
+  <h2>🏗 Architecture</h2>
+  <p>ERP → Gateway → Microsoft Fabric → Lakehouse → Power BI</p>
+  <img src="images/ERP data pipeline with Power BI integration.png">
+</section>
+
+<section>
+  <h2>⚙️ Data Pipeline</h2>
+  <ul>
+    <li>Metadata-driven pipeline</li>
+    <li>Dynamic table ingestion</li>
+    <li>Incremental load using watermark</li>
+    <li>Centralized logging framework</li>
+  </ul>
+
+  <!-- SLIDER -->
+  <div class="slider">
+    <img class="slide active" src="images/Pipeline1.png">
+    <img class="slide" src="images/Pipeline1-1.png">
+    <img class="slide" src="images/Pipeline1-2.png">
+    <img class="slide" src="images/Pipeline1-3.png">
+    <img class="slide" src="images/Pipeline1-4.png">
+
+    <button class="prev" onclick="changeSlide(-1)">❮</button>
+    <button class="next" onclick="changeSlide(1)">❯</button>
+  </div>
+</section>
+
+<section>
+  <h2>🧱 Lakehouse Architecture</h2>
+  <div class="grid">
+    <div class="card"><b>Bronze:</b> Raw data</div>
+    <div class="card"><b>Silver:</b> Clean data</div>
+    <div class="card"><b>Gold:</b> Business data</div>
+    <div class="card"><b>Optimization:</b> Delta + Partition</div>
+  </div>
+
+  <div class="image-grid">
+    <img src="images/Lakehouse-1.png">
+    <img src="images/Lakehouse-1-2.png">
+    <img src="images/Lakehouse-1-3.png">
+  </div>
+</section>
+
+<section>
+  <h2>📊 Data Model</h2>
+  <ul>
+    <li>Star Schema</li>
+    <li>Fact & Dimension</li>
+    <li>SCD Type 2</li>
+  </ul>
+
+  <div class="image-row">
+    <img src="images/Data_Model_Procurement&Inventory.png">
+    <img src="images/Data_Model_Finance.png">
+  </div>
+</section>
+
+<section>
+  <h2>🚀 Key Features</h2>
+  <div class="grid">
+    <div class="card">Incremental Load</div>
+    <div class="card">SCD Type 2</div>
+    <div class="card">Data Validation</div>
+    <div class="card">Logging Framework</div>
+  </div>
+</section>
+
+<section>
+  <h2>📈 Power BI Dashboards</h2>
+
+  <h3>S2P Dashboards</h3>
+  <div class="slider">
+    <img class="slide active" src="images/Procurement Dashboard.png">
+    <img class="slide" src="images/Inventory_Dashboard.png">
+
+    <button class="prev" onclick="changeSlide(-1)">❮</button>
+    <button class="next" onclick="changeSlide(1)">❯</button>
+  </div>
+
+  <h3>Financial Dashboards</h3>
+  <div class="slider">
+    <img class="slide active" src="images/Financial Overview.png">
+    <img class="slide" src="images/P&L Dashboard.png">
+    <img class="slide" src="images/Ledger & Trial Balance.png">
+    <img class="slide" src="images/Cash Flow.png">
+    <img class="slide" src="images/Payables & Receivables Aging.png">
+
+    <button class="prev" onclick="changeSlide(-1)">❮</button>
+    <button class="next" onclick="changeSlide(1)">❯</button>
+  </div>
+</section>
+
+<section>
+  <h2>💡 Business Impact</h2>
+  <ul>
+    <li>Faster reporting</li>
+    <li>Better insights</li>
+    <li>Scalable architecture</li>
+  </ul>
+</section>
+
+<section>
+  <h2>👨‍💻 My Contribution</h2>
+  <ul>
+    <li>Architecture Design</li>
+    <li>Pipeline Development</li>
+    <li>Data Modeling</li>
+    <li>Dashboard Creation</li>
+  </ul>
+</section>
+
+<section>
+  <h2>📬 Contact</h2>
+  <p>
+    <a href="https://www.linkedin.com/in/gurupadayya-pujar-9b772085" target="_blank">
+      LinkedIn Profile
+    </a>
+  </p>
+  <p>Email: gurupadayatp@yahoo.com</p>
+</section>
+
+<script>
+let sliders = document.querySelectorAll(".slider");
+
+sliders.forEach((slider) => {
+  let slides = slider.querySelectorAll(".slide");
+  let index = 0;
+
+  function showSlide(i) {
+    slides.forEach(s => s.classList.remove("active"));
+    index = (i + slides.length) % slides.length;
+    slides[index].classList.add("active");
+  }
+
+  slider.querySelector(".next").onclick = () => showSlide(index + 1);
+  slider.querySelector(".prev").onclick = () => showSlide(index - 1);
+
+  setInterval(() => {
+    showSlide(index + 1);
+  }, 3000);
+});
+</script>
+
+</body>
+</html>
